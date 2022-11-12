@@ -178,6 +178,8 @@
  "M-j" 'evil-next-visual-line
  "M-k" 'evil-previous-visual-line
  "M-l" 'evil-forward-char
+ "M-w" 'evil-forward-word-begin
+ "M-b" 'evil-backward-word-begin
  "M-;" 'evil-normal-state
  "M-o" 'evil-open-below
  "C-M-o" 'evil-open-above
