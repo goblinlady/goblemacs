@@ -1,0 +1,5 @@
+#+title: Goblemacs
+#+author: Rurika Misaka
+
+* Goblemacs
+This configuration is stolen from [[https://github.com/daviwil/emacs-from-scratch][Runemacs]].
