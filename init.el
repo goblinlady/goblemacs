@@ -1,5 +1,5 @@
 ;; Adjust this font size
-(defvar goblemacs/default-font-size 100)
+(defvar goblemacs/default-font-size 120)
 
 (setq inhibit-startup-message t)
 
@@ -135,7 +135,7 @@
    "tt" '(counsel-load-theme :which-key "choose theme")))
 
 (general-define-key
- "C-;" 'counsel-switch-buffer
+ "C-M-j" 'counsel-switch-buffer
  "C-s" 'counsel-grep-or-swiper
  "C-SPC" nil	;; Preserve for input method
  "M-h" nil
@@ -206,3 +206,11 @@
 
 (goblemacs/leader-keys
  "ts" '(hydra-text-scale/body :which-key "scale text"))
+
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  (setq projectile-switch-project-action #'projectile-dired))
