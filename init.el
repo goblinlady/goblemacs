@@ -213,4 +213,6 @@
   :bind-keymap
   ("C-c p" . projectile-command-map)
   :init
+  (when (file-directory-p "~/Documents/Projects")
+    (setq projectile-project-search-path '(("~/Documents/Projects" . 5))))
   (setq projectile-switch-project-action #'projectile-dired))
