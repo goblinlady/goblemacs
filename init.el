@@ -14,7 +14,8 @@
 (menu-bar-mode -1)	; Disable the menubar
 
 ;; Setup the visible bell
-(setq visible-bell t)
+(setq visible-bell nil
+      ring-bell-function #'ignore)
 
 ;; Set font size
 (set-face-attribute 'default nil
