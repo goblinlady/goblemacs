@@ -138,6 +138,7 @@
  "C-M-j" 'counsel-switch-buffer
  "C-s" 'counsel-grep-or-swiper
  "C-SPC" nil	;; Preserve for input method
+ "C-=" 'yank
  "M-h" nil
  "M-j" nil
  "M-k" nil
