@@ -189,6 +189,8 @@
  "C-M-o" 'evil-open-above
  "M-a" 'evil-append-line
  "M-d" 'evil-insert-line
+ "M-p" 'evil-paste-after
+ "M-P" 'evil-paste-before
  "M-u" 'evil-undo)
 
 (use-package evil-collection
@@ -217,3 +219,6 @@
   (when (file-directory-p "~/Documents/Projects")
     (setq projectile-project-search-path '(("~/Documents/Projects" . 5))))
   (setq projectile-switch-project-action #'projectile-dired))
+
+(use-package counsel-projectile
+  :config (counsel-projectile-mode))
