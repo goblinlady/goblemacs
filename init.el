@@ -124,6 +124,8 @@
 
 (defconst goblemacs/leader "C-M-;")
 
+(use-package org)
+
 (use-package general
   :config
   (general-create-definer goblemacs/leader-keys
