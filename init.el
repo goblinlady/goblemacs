@@ -124,7 +124,14 @@
 
 (defconst goblemacs/leader "C-M-;")
 
-(use-package org)
+(use-package org
+  :config
+  (setq org-ellipsis " ▼"
+	org-hide-emphasis-markers t))
+
+(use-package org-bullets
+  :after org
+  :hook (org-mode . org-bullets-mode))
 
 (use-package general
   :config
