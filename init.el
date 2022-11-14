@@ -244,6 +244,8 @@
 ;; forge
 ; (use-package forge)
 
+;; This part is stolen from:
+;; https://hiepph.github.io/post/2018-11-07-use-package/
 (use-package neotree
   :ensure t
   :bind ("<f8>" . 'neotree-toggle)

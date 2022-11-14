@@ -2,4 +2,4 @@
 #+author: Rurika Misaka
 
 * Goblemacs
-This configuration is stolen from [[https://github.com/daviwil/emacs-from-scratch][Runemacs]].
+This configuration is mostly stolen from [[https://github.com/daviwil/emacs-from-scratch][Runemacs]].
