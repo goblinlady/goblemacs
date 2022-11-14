@@ -243,3 +243,24 @@
 
 ;; forge
 ; (use-package forge)
+
+(use-package neotree
+  :ensure t
+  :bind ("<f8>" . 'neotree-toggle)
+  :init
+  ;; slow rendering
+  (setq inhibit-compacting-font-caches t)
+
+  ;; set icons theme
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+  ;; Every time when the neotree window is opened, let it find current file and
+  ;; jump
+  (setq neo-smart-open t)
+
+  ;; show hidden files
+  ; (setq-default neo-show-hidden-files t)
+
+  ;; When running 'projectile-switch-project' (C-c p p), 'neotree' will change
+  ;; root automatically
+  (setq projectile-switch-project-action 'neotree-projectile-action))
