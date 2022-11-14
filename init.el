@@ -196,6 +196,9 @@
  "M-P" 'evil-paste-before
  "M-u" 'evil-undo)
 
+;; Replace C-w with SPC
+(general-def :states '(normal motion emacs) "SPC" 'evil-window-map)
+
 (use-package evil-collection
   :after evil
   :config
