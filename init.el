@@ -276,3 +276,12 @@
 			     (ruby . t)))
 
 (setq org-confirm-babel-evaluate nil)
+
+(electric-pair-mode)
+
+;; This part is stolen from:
+;; https://www.topbug.net/blog/2016/09/29/emacs-disable-certain-pairs-for-electric-pair-mode/
+;; electric pair disable '<'
+(setq electric-pair-inhibit-predicate
+      `(lambda (c)
+	 (if (char-equal c ?<) t (,electric-pair-inhibit-predicate c))))
