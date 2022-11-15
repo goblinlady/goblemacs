@@ -268,3 +268,9 @@
   ;; When running 'projectile-switch-project' (C-c p p), 'neotree' will change
   ;; root automatically
   (setq projectile-switch-project-action 'neotree-projectile-action))
+
+;; Set org babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages '((C . t)
+			     (python . t)
+			     (ruby . t)))
