@@ -133,6 +133,8 @@
   :after org
   :hook (org-mode . org-bullets-mode))
 
+(require 'org-mouse)
+
 (use-package general
   :config
   (general-create-definer goblemacs/leader-keys
