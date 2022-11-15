@@ -274,3 +274,5 @@
  'org-babel-load-languages '((C . t)
 			     (python . t)
 			     (ruby . t)))
+
+(setq org-confirm-babel-evaluate nil)
