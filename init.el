@@ -303,3 +303,21 @@
 (add-to-list 'org-structure-template-alist '("py" . "src python"))
 (add-to-list 'org-structure-template-alist '("pyo" . "src python :results output"))
 (add-to-list 'org-structure-template-alist '("pyv" . "src python :results value"))
+
+;; lsp-mode
+(use-package lsp-mode
+  :commands lsp
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :config
+  (lsp-enable-which-key-integration t))
+
+(use-package lsp-ui :commands lsp-ui-mode)
+
+;; You need install ccls first
+(use-package ccls
+  :hook ((c-mode c++-mode cuda-mode) .
+	 (lambda () (require 'clss) (lsp))))
+
+(setq ccls-executable "/usr/bin/ccls")
+;; (setq ccls-args '("--log-file=/tmp/ccls.log"))
