@@ -287,3 +287,19 @@
 (setq electric-pair-inhibit-predicate
       `(lambda (c)
 	 (if (char-equal c ?<) t (,electric-pair-inhibit-predicate c))))
+
+;; Structure templates
+(require 'org-tempo)
+
+(add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+(add-to-list 'org-structure-template-alist '("sho" . "src shell :results output"))
+(add-to-list 'org-structure-template-alist '("shv" . "src shell :results value"))
+(add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
+(add-to-list 'org-structure-template-alist '("elo" . "src emacs-lisp :results output"))
+(add-to-list 'org-structure-template-alist '("elv" . "src emacs-lisp :results value"))
+(add-to-list 'org-structure-template-alist '("rb" . "src ruby"))
+(add-to-list 'org-structure-template-alist '("rbo" . "src ruby :results output"))
+(add-to-list 'org-structure-template-alist '("rbv" . "src ruby : results value"))
+(add-to-list 'org-structure-template-alist '("py" . "src python"))
+(add-to-list 'org-structure-template-alist '("pyo" . "src python :results output"))
+(add-to-list 'org-structure-template-alist '("pyv" . "src python :results value"))
