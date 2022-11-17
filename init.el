@@ -6,6 +6,28 @@
 (setq scroll-step 1)
 (setq scroll-margin 5)
 
+;; DiredOmitMode
+(setq my-dired-ls-switches "-alh --ignore=.* --ignore=\\#* --ignore=*~")
+
+(setq my-dired-switch 1)
+
+(add-hook 'dired-mode-hook
+	(lambda ()
+	    "Set the right mode for new dired buffers."
+	    (when (= my-dired-switch 1)
+	    (dired-sort-other my-dired-ls-switches))))
+
+(add-hook 'dired-mode-hook
+	(lambda ()
+	    (define-key dired-mode-map (kbd "M-o")
+	    (lambda ()
+		"Toggle between hide and show."
+		(interactive)
+		(setq my-dired-switch (- my-dired-switch))
+		(if (= my-dired-switch 1)
+		    (dired-sort-other my-dired-ls-switches)
+		(dired-sort-other "-alh"))))))
+
 (global-hl-line-mode t)		; Highlight current line
 
 ; (scroll-bar-mode -1)	; Disable visible scrollbar
