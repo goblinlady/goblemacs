@@ -459,3 +459,9 @@
   :after (treemacs)
   :ensure t
   :config (treemacs-set-scope-type 'Tabs))
+
+;; vterm
+(use-package vterm
+  :commands vterm
+  :config
+  (setq vterm-max-scrollback 1000))
