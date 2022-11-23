@@ -262,6 +262,8 @@
 (use-package counsel-projectile
   :config (counsel-projectile-mode))
 
+(use-package rg)
+
 (use-package magit
   :commands (magit-status magit-get-current-branch)
   :custom
