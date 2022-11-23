@@ -465,3 +465,10 @@
   :commands vterm
   :config
   (setq vterm-max-scrollback 1000))
+
+;; eshell
+(use-package eshell-git-prompt)
+
+(use-package eshell
+  :config
+  (eshell-git-prompt-use-theme 'powerline))
