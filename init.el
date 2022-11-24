@@ -6,19 +6,6 @@
 (setq scroll-step 1)
 (setq scroll-margin 5)
 
-(use-package dired
-  :ensure nil
-  :commands (dired dired-jump)
-  :bind (("C-x C-j" . dired-jump))
-  :config
-  (evil-collection-define-key 'normal 'dired-mode-map
-    "h" 'dired-up-directory
-    "l" 'dired-find-file))
-
-(setq dired-dwim-target t)
-
-(setq delete-by-moving-to-trash t)
-
 ;; DiredOmitMode
 (setq my-dired-ls-switches "-alh --ignore=.* --ignore=\\#* --ignore=*~")
 
@@ -487,3 +474,18 @@
 (use-package eshell
   :config
   (eshell-git-prompt-use-theme 'powerline))
+
+(use-package dired
+  :ensure nil
+  :commands (dired dired-jump)
+  :bind (("C-x C-j" . dired-jump))
+  :config
+  (evil-collection-define-key 'normal 'dired-mode-map
+    "h" 'dired-single-up-directory
+    "l" 'dired-single-buffer))
+
+(use-package dired-single)
+
+(setq dired-dwim-target t)
+
+(setq delete-by-moving-to-trash t)
