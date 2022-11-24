@@ -319,7 +319,8 @@
 
 ;; Set org babel
 (org-babel-do-load-languages
- 'org-babel-load-languages '((C . t)
+ 'org-babel-load-languages '((shell . t)
+			     (C . t)
 			     (python . t)
 			     (ruby . t)))
 
