@@ -1,5 +1,13 @@
 (server-start)
 
+(setq initial-scratch-message "")
+
+(defun create-scratch-buffer nil
+  "create a scratch buffer"
+  (interactive)
+  (switch-to-buffer (get-buffer-create "*scratch*"))
+  (lisp-interaction-mode))
+
 ;; Adjust this font size
 (defvar goblemacs/default-font-size 120)
 
