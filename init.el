@@ -502,3 +502,9 @@
 				("png" . "eog")
 				("mkv" . "vlc")
 				("mp4" . "vlc"))))
+
+(defun file-manager-open-dir()
+  (interactive)
+  (shell-command "xdg-open ."))
+
+(general-define-key "M-s-f" 'file-manager-open-dir)
