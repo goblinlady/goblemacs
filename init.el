@@ -508,3 +508,10 @@
   (shell-command "xdg-open ."))
 
 (general-define-key "M-s-f" 'file-manager-open-dir)
+
+;; dired-hide-dotfiles
+;;(use-package dired-hide-dotfiles
+;;  :hook (dired-mode . dired-hide-dotfiles-mode)
+;;  :config
+;;  (evil-collection-define-key 'normal 'dired-mode-map
+;;    "H" 'dired-hide-dotfiles-mode))
