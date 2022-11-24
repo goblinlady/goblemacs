@@ -489,3 +489,16 @@
 (setq dired-dwim-target t)
 
 (setq delete-by-moving-to-trash t)
+
+(use-package all-the-icons-dired
+  :if (display-graphic-p)
+  :hook (dired-mode . all-the-icons-dired-mode)
+  :config
+  (setq all-the-icons-dired-monochrome nil))
+
+(use-package dired-open
+  :config
+  (setq dired-open-extensions '(("jpg" . "eog")
+				("png" . "eog")
+				("mkv" . "vlc")
+				("mp4" . "vlc"))))
