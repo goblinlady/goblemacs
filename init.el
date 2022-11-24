@@ -1,3 +1,5 @@
+(server-start)
+
 ;; Adjust this font size
 (defvar goblemacs/default-font-size 120)
 
@@ -114,7 +116,8 @@
 ;;
 ;; M-x all-the-icons-install-fonts
 
-(use-package all-the-icons)
+(use-package all-the-icons
+  :ensure t)
 
 ;; use doom-modeline
 (use-package doom-modeline
@@ -294,6 +297,17 @@
   ;; When running 'projectile-switch-project' (C-c p p), 'neotree' will change
   ;; root automatically
   (setq projectile-switch-project-action 'neotree-projectile-action))
+
+;; This part is stolen from:
+;; https://github.com/jaypei/emacs-neotree/issues/194#issuecomment-630929467
+;; Problem with getting all-the-icons-applied
+(defun new-frame-setup (frame)
+  (if (display-graphic-p frame)
+      (setq neo-theme 'icons)))
+
+(mapc 'new-frame-setup (frame-list))
+
+(add-hook 'after-make-frame-functions 'new-frame-setup)
 
 ;; Set org babel
 (org-babel-do-load-languages
