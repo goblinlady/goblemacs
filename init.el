@@ -491,6 +491,8 @@
   :config
   (setq vterm-max-scrollback 1000))
 
+(use-package multi-vterm :ensure t)
+
 ;; eshell
 (use-package eshell-git-prompt)
 
